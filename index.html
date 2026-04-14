@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClarityLines — Gafas Inteligentes con Lentes Adaptativas | Castellón</title>
+  <meta name="description" content="ClarityLines: gafas inteligentes con lentes adaptativas, filtro de luz azul y autoenfoque. Envío gratis en 48h, garantía 2 años. Tienda online. Castellón de la Plana." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.claritylines.es/" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 Free -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+<!-- ====================================================
+     BARRA DE PROGRESO DE LECTURA
+===================================================== -->
+<div class="progress-bar" id="progress-bar" aria-hidden="true"></div>
+
+
+<!-- ====================================================
+     HEADER
+===================================================== -->
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="#" class="logo" aria-label="ClarityLines inicio">
+      <span class="logo-main">Clarity<span>Lines</span></span>
+      <span class="logo-sub">Smart Eyewear</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navegación principal">
+      <ul>
+        <li><a href="#features">Tecnología</a></li>
+        <li><a href="#how-it-works">Cómo funciona</a></li>
+        <li><a href="#pricing">Precios</a></li>
+        <li><a href="#avalada">Ciencia</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="#pricing" class="btn btn--amber btn--header">Comprar ahora</a>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav">
+    <ul>
+      <li><a href="#features">Tecnología</a></li>
+      <li><a href="#how-it-works">Cómo funciona</a></li>
+      <li><a href="#pricing">Precios</a></li>
+      <li><a href="#avalada">Ciencia</a></li>
+    </ul>
+  </div>
+</header>
+
+
+<!-- ====================================================
+     HERO + TICKER — juntos ocupan exactamente 100vh
+===================================================== -->
+<div class="hero-ticker-wrap" id="hero-ticker-wrap">
+
+  <section class="hero" aria-label="Hero ClarityLines">
+
+    <div class="hero-image-wrap" id="hero-image-wrap">
+      <img
+        src="https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=1800&auto=format&fit=crop&q=80"
+        alt="Persona usando gafas inteligentes ClarityLines con lentes adaptativas"
+        class="hero-img"
+        id="hero-img"
+        fetchpriority="high"
+      />
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="hero-content-wrap">
+      <div class="hero-content">
+        <p class="hero-eyebrow reveal">Nuevas gafas inteligentes 2026</p>
+        <h1 class="hero-title reveal">
+          Una sola<br />montura.<br />
+          <em>Toda la visión</em><br />
+          que necesitas.
+        </h1>
+        <p class="hero-sub reveal">
+          Las ClarityLines se adaptan a tu graduación, filtran la luz azul
+          automáticamente y se enfocan donde tú miras. Sin cambios de gafas,
+          sin compromisos.
+        </p>
+        <div class="hero-btns reveal">
+          <a href="#pricing" class="btn btn--amber">
+            Descubrir precios <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+          <a href="#how-it-works" class="btn btn--outline-light">Cómo funciona</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+
+    <div class="hero-stats" aria-label="Datos técnicos clave">
+      <div class="hero-stats-inner">
+        <div class="stat-item">
+          <span class="stat-num">0.01&thinsp;s</span>
+          <span class="stat-desc">Tiempo de adaptación</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">CE · FDA</span>
+          <span class="stat-desc">Certificaciones internacionales</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">5 en 1</span>
+          <span class="stat-desc">Tipos de lente en una</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">2 años</span>
+          <span class="stat-desc">Garantía incluida</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ====================================================
+       TICKER — pegado al hero, forma parte de los 100vh
+  ===================================================== -->
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker-track">
+      <span>ClarityLines &mdash; Smart Eyewear &mdash; Lentes Adaptativas &mdash;</span>
+      <span>Filtro de luz azul inteligente &mdash; Autoenfoque &mdash; App móvil &mdash;</span>
+      <span>ClarityLines &mdash; Smart Eyewear &mdash; Lentes Adaptativas &mdash;</span>
+      <span>Filtro de luz azul inteligente &mdash; Autoenfoque &mdash; App móvil &mdash;</span>
+    </div>
+  </div>
+
+</div><!-- /hero-ticker-wrap -->
+
+
+<!-- ====================================================
+     FEATURES — layout editorial asimétrico
+===================================================== -->
+<section class="features section" id="features" aria-labelledby="features-title">
+
+  <div class="features-intro">
+    <div class="features-intro-text">
+      <span class="label reveal">— Tecnología adaptativa</span>
+      <h2 class="section-title" id="features-title">
+        <span class="reveal">Cinco</span><br />
+        <span class="reveal text-accent">innovaciones.</span><br />
+        <span class="reveal">Una sola montura.</span>
+      </h2>
+    </div>
+    <p class="features-intro-body reveal">
+      Cada función trabaja en silencio. Tus ojos simplemente ven mejor, en cualquier situación, sin que tengas que hacer nada.
+    </p>
+  </div>
+
+  <!-- Grid asimétrico: tarjeta grande + columna derecha -->
+  <div class="features-asymmetric">
+
+    <!-- Tarjeta grande destacada -->
+    <div class="feature-card feature-card--hero reveal">
+      <div class="feature-card-num" aria-hidden="true">01</div>
+      <div class="feature-icon" aria-hidden="true"><i class="fas fa-eye"></i></div>
+      <h3 class="feature-title">Graduación adaptativa</h3>
+      <p class="feature-body">Los microcristales líquidos ajustan la potencia dióptrica en tiempo real según la distancia al objeto. Olvídate de cambiar de gafas para leer, conducir o ver la pantalla.</p>
+      <div class="feature-tag">Core Tech</div>
+    </div>
+
+    <!-- Columna derecha: dos filas -->
+    <div class="features-col">
+      <div class="features-row-top">
+        <div class="feature-card reveal">
+          <div class="feature-card-num" aria-hidden="true">02</div>
+          <div class="feature-icon" aria-hidden="true"><i class="fas fa-display"></i></div>
+          <h3 class="feature-title">Filtro de luz azul inteligente</h3>
+          <p class="feature-body">El sensor detecta automáticamente cuando estás frente a una pantalla y activa el filtro en menos de un segundo.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-card-num" aria-hidden="true">03</div>
+          <div class="feature-icon" aria-hidden="true"><i class="fas fa-mobile-screen-button"></i></div>
+          <h3 class="feature-title">Conectividad móvil</h3>
+          <p class="feature-body">Sincroniza con la app para personalizar perfiles de visión y actualizar el firmware de forma inalámbrica.</p>
+        </div>
+      </div>
+      <div class="features-row-bottom">
+        <div class="feature-card reveal">
+          <div class="feature-card-num" aria-hidden="true">04</div>
+          <div class="feature-icon" aria-hidden="true"><i class="fas fa-crosshairs"></i></div>
+          <h3 class="feature-title">Autoenfoque activo</h3>
+          <p class="feature-body">El eye-tracking detecta hacia dónde miras y enfoca la lente de forma completamente automática.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-card-num" aria-hidden="true">05</div>
+          <div class="feature-icon" aria-hidden="true"><i class="fas fa-sun"></i></div>
+          <h3 class="feature-title">Adaptación al entorno</h3>
+          <p class="feature-body">Detecta la luminosidad y ajusta el tinte, el contraste y la protección UV según la actividad.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-card-num" aria-hidden="true">06</div>
+          <div class="feature-icon" aria-hidden="true"><i class="fas fa-microchip"></i></div>
+          <h3 class="feature-title">IA integrada</h3>
+          <p class="feature-body">Aprende tus hábitos visuales y anticipa los ajustes antes de que los necesites. Mejora cada semana.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ====================================================
+     SPLIT — spec visual de producto
+===================================================== -->
+<section class="split-spec section" aria-label="Especificaciones técnicas">
+
+  <div class="split-spec-inner">
+
+    <!-- Imagen a pantalla completa izquierda -->
+    <div class="split-spec-image reveal">
+      <img
+        src="https://images.unsplash.com/photo-1559181567-c3190ca9959b?w=900&auto=format&fit=crop&q=80"
+        alt="Detalle de las lentes inteligentes ClarityLines con tecnología de cristal líquido"
+        loading="lazy"
+      />
+      <div class="split-spec-overlay-tag">
+        <span class="tag-mono">ARM Cortex-M55</span>
+        <span class="tag-desc">Procesador integrado en patilla</span>
+      </div>
+    </div>
+
+    <!-- Contenido derecho -->
+    <div class="split-spec-content">
+      <span class="label reveal">— Hardware de precisión</span>
+      <h2 class="section-title reveal">
+        24 gramos.<br /><em>Todo dentro.</em>
+      </h2>
+      <p class="split-spec-body reveal">
+        La electrónica vive en el interior de la montura de titanio aeroespacial. Nada sobresale, nada se nota. Solo una pieza de diseño que resulta ser el dispositivo óptico más avanzado que existe.
+      </p>
+
+      <div class="spec-list">
+        <div class="spec-row reveal">
+          <span class="spec-key">Procesador</span>
+          <span class="spec-val">ARM Cortex-M55 · 480 MHz</span>
+        </div>
+        <div class="spec-row reveal">
+          <span class="spec-key">Conectividad</span>
+          <span class="spec-val">Bluetooth 5.3 LE</span>
+        </div>
+        <div class="spec-row reveal">
+          <span class="spec-key">Batería</span>
+          <span class="spec-val">48h uso intensivo · carga 40 min</span>
+        </div>
+        <div class="spec-row reveal">
+          <span class="spec-key">Sensores</span>
+          <span class="spec-val">IMU 6 ejes · luz ambiental · proximidad</span>
+        </div>
+        <div class="spec-row reveal">
+          <span class="spec-key">Lente</span>
+          <span class="spec-val">Cristal líquido ±8D · respuesta 0.01s</span>
+        </div>
+        <div class="spec-row reveal">
+          <span class="spec-key">Marco</span>
+          <span class="spec-val">Titanio aeroespacial · 24g</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ====================================================
+     CÓMO FUNCIONA — pasos con numeración grande
+===================================================== -->
+<section class="how section" id="how-it-works" aria-labelledby="how-title">
+
+  <div class="how-header">
+    <div class="how-header-text">
+      <span class="label reveal">— Proceso</span>
+      <h2 class="section-title" id="how-title">
+        <span class="reveal">Tan simple</span><br />
+        <em class="reveal">como ponértelas.</em>
+      </h2>
+    </div>
+  </div>
+
+  <!-- Scroll horizontal en móvil, grid en escritorio -->
+  <div class="how-steps-scroll">
+    <div class="how-steps">
+      <div class="step reveal">
+        <div class="step-num" aria-hidden="true">01</div>
+        <div class="step-text">
+          <h3>Escanea tu graduación</h3>
+          <p>Con la app ClarityLines o subiendo tu receta óptica, configuramos las lentes con tu graduación exacta en menos de dos minutos.</p>
+        </div>
+      </div>
+      <div class="step-connector" aria-hidden="true"></div>
+      <div class="step reveal">
+        <div class="step-num" aria-hidden="true">02</div>
+        <div class="step-text">
+          <h3>Recibe y activa</h3>
+          <p>Las gafas llegan preconfiguradas. El calibrado inicial tarda 90 segundos mientras las usas. Sin visita a la óptica.</p>
+        </div>
+      </div>
+      <div class="step-connector" aria-hidden="true"></div>
+      <div class="step reveal">
+        <div class="step-num" aria-hidden="true">03</div>
+        <div class="step-text">
+          <h3>Las gafas hacen el resto</h3>
+          <p>Los sensores detectan el entorno y las lentes se ajustan automáticamente. Silenciosas, invisibles, perfectas.</p>
+        </div>
+      </div>
+      <div class="step-connector" aria-hidden="true"></div>
+      <div class="step reveal">
+        <div class="step-num" aria-hidden="true">04</div>
+        <div class="step-text">
+          <h3>Mejoran con el tiempo</h3>
+          <p>La IA aprende tus rutinas y personaliza los ajustes semana tras semana sin ninguna intervención por tu parte.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ====================================================
+     POR QUÉ ELEGIRNOS — propuestas de valor concretas
+===================================================== -->
+<section class="porque section" id="porque" aria-labelledby="porque-title">
+
+  <div class="section-header-center">
+    <span class="label reveal">— Nuestros compromisos</span>
+    <h2 class="section-title reveal" id="porque-title">
+      Por qué elegir<br /><em>ClarityLines</em>
+    </h2>
+    <p class="porque-intro reveal">
+      Comprar gafas online requiere confianza. Estos son los compromisos que hacemos posible que lo hagas sin dudas.
+    </p>
+  </div>
+
+  <div class="porque-grid">
+
+    <div class="porque-card reveal">
+      <div class="porque-icon" aria-hidden="true">
+        <i class="fas fa-truck-fast"></i>
+      </div>
+      <h3 class="porque-title">Envío gratis en 48 h</h3>
+      <p class="porque-body">
+        Todos los pedidos se envían sin coste adicional y llegan en menos de 48 horas laborables. Seguimiento en tiempo real incluido.
+      </p>
+    </div>
+
+    <div class="porque-card reveal">
+      <div class="porque-icon" aria-hidden="true">
+        <i class="fas fa-rotate-left"></i>
+      </div>
+      <h3 class="porque-title">30 días de prueba sin riesgo</h3>
+      <p class="porque-body">
+        Si en 30 días no estás satisfecho, te devolvemos el importe íntegro. Sin preguntas, sin formularios complicados, sin coste de devolución.
+      </p>
+    </div>
+
+    <div class="porque-card reveal">
+      <div class="porque-icon" aria-hidden="true">
+        <i class="fas fa-shield-halved"></i>
+      </div>
+      <h3 class="porque-title">Garantía de 2 años</h3>
+      <p class="porque-body">
+        Cubrimos cualquier defecto de fabricación o fallo electrónico durante dos años. El modelo Elite amplía la cobertura hasta 4 años.
+      </p>
+    </div>
+
+    <div class="porque-card reveal">
+      <div class="porque-icon" aria-hidden="true">
+        <i class="fas fa-user-doctor"></i>
+      </div>
+      <h3 class="porque-title">Asesoramiento óptico real</h3>
+      <p class="porque-body">
+        Nuestro equipo de ópticos titulados resuelve tus dudas antes y después de la compra. Por chat, teléfono o videollamada.
+      </p>
+    </div>
+
+    <div class="porque-card reveal">
+      <div class="porque-icon" aria-hidden="true">
+        <i class="fas fa-certificate"></i>
+      </div>
+      <h3 class="porque-title">Certificación CE y FDA</h3>
+      <p class="porque-body">
+        Las ClarityLines cumplen con la normativa europea de productos sanitarios (CE) y la certificación americana de la FDA. Seguridad verificada.
+      </p>
+    </div>
+
+    <div class="porque-card reveal">
+      <div class="porque-icon" aria-hidden="true">
+        <i class="fas fa-lock"></i>
+      </div>
+      <h3 class="porque-title">Pago 100% seguro</h3>
+      <p class="porque-body">
+        Todas las transacciones se procesan con cifrado SSL de 256 bits. Aceptamos tarjeta, Bizum, PayPal y pago a plazos sin intereses.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ====================================================
+     BENEFICIOS — split screen asimétrico
+===================================================== -->
+<section class="benefits section" id="benefits" aria-labelledby="benefits-title">
+  <div class="benefits-inner">
+
+    <div class="benefits-image reveal">
+      <img
+        src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=900&auto=format&fit=crop&q=80"
+        alt="Persona trabajando cómodamente con gafas ClarityLines, sin fatiga ocular"
+        loading="lazy"
+      />
+    </div>
+
+    <div class="benefits-content">
+      <span class="label reveal">— Por qué elegir ClarityLines</span>
+      <h2 class="section-title reveal" id="benefits-title">
+        Un par de gafas.<br /><em>Toda una vida</em> resuelta.
+      </h2>
+      <div class="benefit-item reveal">
+        <div class="benefit-icon" aria-hidden="true"><i class="fas fa-piggy-bank"></i></div>
+        <div>
+          <h4>Ahorra dinero a largo plazo</h4>
+          <p>Una sola montura reemplaza tus gafas de lectura, las de sol, las de pantalla y las graduadas. La inversión se amortiza en menos de un año.</p>
+        </div>
+      </div>
+      <div class="benefit-item reveal">
+        <div class="benefit-icon" aria-hidden="true"><i class="fas fa-briefcase"></i></div>
+        <div>
+          <h4>Practicidad absoluta</h4>
+          <p>Sal de casa con un solo par. Sin estuches, sin cambios incómodos. Listo para cualquier situación del día.</p>
+        </div>
+      </div>
+      <div class="benefit-item reveal">
+        <div class="benefit-icon" aria-hidden="true"><i class="fas fa-heart-pulse"></i></div>
+        <div>
+          <h4>Protege tu salud visual</h4>
+          <p>El filtro automático de luz azul reduce la fatiga ocular hasta un 47% en jornadas frente al ordenador.</p>
+        </div>
+      </div>
+      <div class="benefit-item reveal">
+        <div class="benefit-icon" aria-hidden="true"><i class="fas fa-star"></i></div>
+        <div>
+          <h4>Diseño que no renuncia al estilo</h4>
+          <p>La tecnología vive en el interior. Desde fuera son unas gafas elegantes y modernas, no un gadget llamativo.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ====================================================
+     PRICING
+===================================================== -->
+<section class="pricing section" id="pricing" aria-labelledby="pricing-title">
+
+  <div class="section-header-center reveal">
+    <span class="label">— Tarifas</span>
+    <h2 class="section-title" id="pricing-title">
+      Precios claros,<br />sin sorpresas.
+    </h2>
+    <p class="pricing-intro">
+      Todos los modelos incluyen la app, el estuche de carga y 2 años de garantía.
+      Elige el nivel de tecnología que se adapta a ti.
+    </p>
+  </div>
+
+  <div class="pricing-grid">
+
+    <div class="price-card reveal">
+      <div class="price-tier">Essential</div>
+      <div class="price-name">Clarity One</div>
+      <p class="price-tagline">Para quienes quieren dar el primer paso.</p>
+      <div class="price-amount">
+        <span class="price-currency">€</span>
+        <span class="price-num">349</span>
+        <span class="price-period">pago único</span>
+      </div>
+      <ul class="price-features">
+        <li><i class="fas fa-check" aria-hidden="true"></i> Graduación adaptativa básica (±4D)</li>
+        <li><i class="fas fa-check" aria-hidden="true"></i> Filtro luz azul manual (via app)</li>
+        <li><i class="fas fa-check" aria-hidden="true"></i> Conectividad Bluetooth 5.3</li>
+        <li><i class="fas fa-check" aria-hidden="true"></i> Batería 32h · carga inalámbrica</li>
+        <li><i class="fas fa-check" aria-hidden="true"></i> Marco titanio ultraligero</li>
+        <li class="muted"><i class="fas fa-times" aria-hidden="true"></i> Autoenfoque activo</li>
+        <li class="muted"><i class="fas fa-times" aria-hidden="true"></i> IA adaptativa</li>
+        <li class="muted"><i class="fas fa-times" aria-hidden="true"></i> Sensor de entorno avanzado</li>
+      </ul>
+      <a href="#" class="btn btn--outline btn--full">Elegir Essential</a>
+    </div>
+
+    <div class="price-card price-card--featured reveal">
+      <div class="price-badge">Más popular</div>
+      <div class="price-tier">Pro</div>
+      <div class="price-name">Clarity Pro</div>
+      <p class="price-tagline">La experiencia completa para usuarios exigentes.</p>
+      <div class="price-amount">
+        <span class="price-currency">€</span>
+        <span class="price-num">599</span>
+        <span class="price-period">pago único</span>
+      </div>
+      <ul class="price-features">
+        <li><i class="fas fa-check" aria-hidden="true"></i> Graduación adaptativa completa (±8D)</li>
+        <li><i class="fas fa-check" aria-hidden="true"></i> Filtro luz azul automático e inteligente</li>
+        <li><i class="fas fa-check" aria-hidden="true"></i> Autoenfoque activo con eye-tracking</li>
+        <li><i class="fas fa-check" aria-hidden="true"></i> Sensor de entorno y actividad</li>
+        <li><i class="fas fa-check" aria-hidden="true"></i> Batería 48h · carga 40 min</li>
+        <li><i class="fas fa-check" aria-hidden="true"></i> App completa con perfiles múltiples</li>
+        <li><i class="fas fa-check" aria-hidden="true"></i> IA adaptativa (aprende tus hábitos)</li>
+        <li class="muted"><i class="fas fa-times" aria-hidden="true"></i> Personalización de montura premium</li>
+      </ul>
+      <a href="#" class="btn btn--amber btn--full">Elegir Clarity Pro</a>
+    </div>
+
+    <div class="price-card reveal">
+      <div class="price-tier">Elite</div>
+      <div class="price-name">Clarity Elite</div>
+      <p class="price-tagline">Edición limitada para quienes no ceden en nada.</p>
+      <div class="price-amount">
+        <span class="price-currency">€</span>
+        <span class="price-num">899</span>
+        <span class="price-period">pago único</span>
+      </div>
+      <ul class="price-features">
+        <li><i class="fas fa-check" aria-hidden="true"></i> Todo lo incluido en Clarity Pro</li>
+        <li><i class="fas fa-check" aria-hidden="true"></i> Montura personalizable (color + grabado)</li>
+        <li><i class="fas fa-check" aria-hidden="true"></i> Lentes de sol inteligentes integradas</li>
+        <li><i class="fas fa-check" aria-hidden="true"></i> Actualizaciones de firmware de por vida</li>
+        <li><i class="fas fa-check" aria-hidden="true"></i> Soporte prioritario 24/7</li>
+        <li><i class="fas fa-check" aria-hidden="true"></i> Estuche de piel vegana premium</li>
+        <li><i class="fas fa-check" aria-hidden="true"></i> Garantía extendida 4 años</li>
+        <li><i class="fas fa-check" aria-hidden="true"></i> Ajuste presencial en casa (servicio Elite)</li>
+      </ul>
+      <a href="#" class="btn btn--outline btn--full">Elegir Elite</a>
+    </div>
+
+  </div>
+
+  <p class="pricing-note">
+    <i class="fas fa-shield-halved" aria-hidden="true"></i>
+    Prueba de 30 días sin riesgo · Devolución gratuita · Envío en 48h
+  </p>
+
+</section>
+
+
+<!-- ====================================================
+     AVALADA POR LA CIENCIA
+===================================================== -->
+<section class="avalada section" id="avalada" aria-labelledby="avalada-title">
+
+  <div class="section-header-center reveal">
+    <span class="label">— Respaldo clínico</span>
+    <h2 class="section-title" id="avalada-title">
+      Avalada por la ciencia.
+    </h2>
+  </div>
+
+  <div class="avalada-grid">
+
+    <div class="avalada-card reveal">
+      <div class="avalada-icon" aria-hidden="true"><i class="fas fa-eye"></i></div>
+      <span class="avalada-num">47%</span>
+      <p class="avalada-desc">Reducción de fatiga ocular en jornadas de 8h frente a pantalla (Estudio Univ. de Valencia, 2025)</p>
+    </div>
+
+    <div class="avalada-card reveal">
+      <div class="avalada-icon" aria-hidden="true"><i class="fas fa-flask"></i></div>
+      <span class="avalada-num">94%</span>
+      <p class="avalada-desc">De pacientes con presbicia reportaron mejora significativa tras 4 semanas (Aval clínico ClarityLens Lab)</p>
+    </div>
+
+    <div class="avalada-card reveal">
+      <div class="avalada-icon" aria-hidden="true"><i class="fas fa-clock"></i></div>
+      <span class="avalada-num">0.01 s</span>
+      <p class="avalada-desc">Tiempo de respuesta de la lente adaptativa, por debajo del umbral de percepción humana</p>
+    </div>
+
+  </div>
+
+  <div class="trust-bar">
+    <div class="trust-item reveal">
+      <i class="fas fa-award" aria-hidden="true"></i>
+      <span>CES Innovation Award 2026</span>
+    </div>
+    <div class="trust-item reveal">
+      <i class="fas fa-flask" aria-hidden="true"></i>
+      <span>Aval clínico oftalmológico</span>
+    </div>
+    <div class="trust-item reveal">
+      <i class="fas fa-truck-fast" aria-hidden="true"></i>
+      <span>Envío gratis en 48h</span>
+    </div>
+    <div class="trust-item reveal">
+      <i class="fas fa-rotate-left" aria-hidden="true"></i>
+      <span>30 días de prueba sin riesgo</span>
+    </div>
+    <div class="trust-item reveal">
+      <i class="fas fa-lock" aria-hidden="true"></i>
+      <span>Pago seguro SSL</span>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ====================================================
+     CTA
+===================================================== -->
+<section class="cta-section" aria-label="Llamada a la acción">
+  <div class="cta-inner">
+    <span class="label reveal">— Empieza hoy</span>
+    <h2 class="cta-title reveal">
+      ¿Listo para ver el mundo<br />de otra manera?
+    </h2>
+    <p class="cta-sub reveal">
+      Únete a más de 12.000 personas que ya han simplificado su vida visual.
+      Pruébalas 30 días y, si no te convencen, te devolvemos el dinero sin preguntas.
+    </p>
+    <div class="cta-btns reveal">
+      <a href="#pricing" class="btn btn--cta-white">
+        <i class="fas fa-glasses" aria-hidden="true"></i> Ver modelos y precios
+      </a>
+      <a href="#features" class="btn btn--outline-light">Conoce la tecnología</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================================================
+     FOOTER
+===================================================== -->
+<footer class="site-footer" id="site-footer">
+
+  <div class="footer-newsletter reveal">
+    <div class="newsletter-text">
+      <h3>Mantente al día<br /><em>con ClarityLines</em></h3>
+      <p>Novedades de producto, guías de salud visual y ofertas exclusivas para suscriptores.</p>
+    </div>
+    <div id="newsletter-form">
+      <div class="newsletter-input-wrap" id="newsletter-input-wrap">
+        <input
+          type="email"
+          id="newsletter-email"
+          placeholder="Tu correo electrónico"
+          aria-label="Correo electrónico para newsletter"
+        />
+        <button id="newsletter-btn" class="btn btn--amber btn--newsletter">Suscribirse</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-nav-grid">
+
+    <div class="footer-brand">
+      <a href="#" class="logo" aria-label="ClarityLines inicio">
+        <span class="logo-main">Clarity<span>Lines</span></span>
+        <span class="logo-sub">Smart Eyewear</span>
+      </a>
+      <p class="footer-tagline">
+        Gafas inteligentes con lentes adaptativas.<br />Castellón de la Plana · Online.
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="footer-col-title">Producto</h4>
+      <ul>
+        <li><a href="#features">Tecnología</a></li>
+        <li><a href="#how-it-works">Cómo funciona</a></li>
+        <li><a href="#pricing">Precios</a></li>
+        <li><a href="#">App ClarityLines</a></li>
+        <li><a href="#">Accesorios</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="footer-col-title">Empresa</h4>
+      <ul>
+        <li><a href="#">Sobre nosotros</a></li>
+        <li><a href="#">Investigación</a></li>
+        <li><a href="#">Prensa</a></li>
+        <li><a href="#">Trabaja con nosotros</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="footer-col-title">Síguenos</h4>
+      <ul class="footer-social">
+        <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        <li><a href="#" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i> TikTok</a></li>
+        <li><a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i> YouTube</a></li>
+        <li><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-legal">
+    <p>&copy; <span id="footer-year"></span> ClarityLines Technologies S.L. Todos los derechos reservados.</p>
+    <ul>
+      <li><a href="#">Privacidad</a></li>
+      <li><a href="#">Aviso legal</a></li>
+      <li><a href="#">Cookies</a></li>
+    </ul>
+  </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
