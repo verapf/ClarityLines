@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto — ClarityLines Technologies S.L.</title>
+  <meta name="description" content="Ponte en contacto con ClarityLines Technologies S.L. Escríbenos, llámanos o visítanos en Castellón de la Plana. Respondemos en menos de 24 horas." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.claritylines.es/contacto.html" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 Free -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/contacto.css" />
+</head>
+<body>
+
+
+<!-- ====================================================
+     BARRA DE PROGRESO DE LECTURA
+===================================================== -->
+<div class="progress-bar" id="progress-bar" aria-hidden="true"></div>
+
+
+<!-- ====================================================
+     HEADER
+===================================================== -->
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="../../index.html" class="logo" aria-label="ClarityLines inicio">
+      <span class="logo-main">Clarity<span>Lines</span></span>
+      <span class="logo-sub">Smart Eyewear</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navegación principal">
+      <ul>
+        <li><a href="../index.html#features">Tecnología</a></li>
+        <li><a href="../index.html#how-it-works">Cómo funciona</a></li>
+        <li><a href="../index.html#pricing">Precios</a></li>
+        <li><a href="../index.html#avalada">Ciencia</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="../index.html#pricing" class="btn btn--amber btn--header">Comprar ahora</a>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav">
+    <ul>
+      <li><a href="../index.html#features">Tecnología</a></li>
+      <li><a href="../index.html#how-it-works">Cómo funciona</a></li>
+      <li><a href="../index.html#pricing">Precios</a></li>
+      <li><a href="../index.html#avalada">Ciencia</a></li>
+    </ul>
+  </div>
+</header>
+
+
+<!-- ====================================================
+     HERO INTERIOR — Hablemos
+===================================================== -->
+<section class="page-hero" aria-label="Cabecera de página Contacto">
+  <div class="page-hero-inner">
+    <span class="label reveal">— Contacto</span>
+    <h1 class="page-hero-title reveal">
+      Hablemos
+    </h1>
+    <p class="page-hero-sub reveal">
+      Cualquier pregunta, colaboración o sugerencia es bienvenida.<br />
+      Respondemos en menos de 24 horas en días laborables.
+    </p>
+  </div>
+</section>
+
+
+<!-- ====================================================
+     SECCIÓN PRINCIPAL — formulario + datos de contacto
+===================================================== -->
+<section class="contacto-section section" id="contacto-form-section" aria-labelledby="contacto-title">
+
+  <h2 class="visually-hidden" id="contacto-title">Formulario de contacto y datos de la empresa</h2>
+
+  <div class="contacto-inner">
+
+    <!-- COLUMNA IZQUIERDA: Formulario 60% -->
+    <div class="contacto-form-wrap">
+      <span class="label reveal">— Escríbenos</span>
+
+      <div class="contacto-form" id="contacto-form" aria-label="Formulario de contacto" novalidate>
+
+        <div class="cf-row cf-row--2col">
+          <div class="cf-field">
+            <label for="cf-nombre" class="cf-label">Nombre completo</label>
+            <input
+              type="text"
+              id="cf-nombre"
+              class="cf-input"
+              placeholder="Tu nombre"
+              aria-required="true"
+              autocomplete="name"
+            />
+          </div>
+          <div class="cf-field">
+            <label for="cf-email" class="cf-label">Correo electrónico</label>
+            <input
+              type="email"
+              id="cf-email"
+              class="cf-input"
+              placeholder="tu@correo.com"
+              aria-required="true"
+              autocomplete="email"
+            />
+          </div>
+        </div>
+
+        <div class="cf-row">
+          <div class="cf-field">
+            <label for="cf-asunto" class="cf-label">Asunto</label>
+            <select id="cf-asunto" class="cf-input cf-select" aria-required="true">
+              <option value="">Selecciona una opción</option>
+              <option value="producto">Consulta sobre producto</option>
+              <option value="pedido">Estado de un pedido</option>
+              <option value="garantia">Garantía y devoluciones</option>
+              <option value="prensa">Prensa y medios</option>
+              <option value="colaboracion">Colaboración / B2B</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="cf-row">
+          <div class="cf-field">
+            <label for="cf-mensaje" class="cf-label">Mensaje</label>
+            <textarea
+              id="cf-mensaje"
+              class="cf-input cf-textarea"
+              placeholder="Cuéntanos en qué podemos ayudarte…"
+              rows="6"
+              aria-required="true"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="cf-row cf-row--actions">
+          <button type="button" id="cf-submit" class="btn btn--amber">
+            Enviar mensaje <i class="fas fa-paper-plane" aria-hidden="true"></i>
+          </button>
+        </div>
+
+      </div><!-- /contacto-form -->
+
+      <!-- Confirmación (oculta hasta envío correcto) -->
+      <div class="cf-confirm" id="cf-confirm" aria-live="polite" hidden>
+        <i class="fas fa-circle-check" aria-hidden="true"></i>
+        <div>
+          <strong>Mensaje recibido.</strong>
+          <p>Nos pondremos en contacto contigo en menos de 24 horas.</p>
+        </div>
+      </div>
+
+    </div><!-- /contacto-form-wrap -->
+
+
+    <!-- COLUMNA DERECHA: Datos de contacto 40% -->
+    <aside class="contacto-info" aria-label="Datos de contacto de ClarityLines">
+
+      <span class="label reveal">— Encuéntranos</span>
+
+      <ul class="contacto-info-list" role="list">
+
+        <li class="contacto-info-item reveal" aria-label="Dirección postal">
+          <div class="contacto-info-icon" aria-hidden="true">
+            <i class="fas fa-location-dot"></i>
+          </div>
+          <div class="contacto-info-text">
+            <span class="contacto-info-label">Dirección</span>
+            <span class="contacto-info-value">
+              Av. del Mar, 14, Pl. 3ª<br />
+              12100 Castellón de la Plana<br />
+              Comunitat Valenciana, España
+            </span>
+          </div>
+        </li>
+
+        <li class="contacto-info-item reveal" aria-label="Correo electrónico">
+          <div class="contacto-info-icon" aria-hidden="true">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contacto-info-text">
+            <span class="contacto-info-label">Email</span>
+            <a href="mailto:hola@claritylines.es" class="contacto-info-value contacto-info-link">
+              hola@claritylines.es
+            </a>
+          </div>
+        </li>
+
+        <li class="contacto-info-item reveal" aria-label="Teléfono de atención">
+          <div class="contacto-info-icon" aria-hidden="true">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contacto-info-text">
+            <span class="contacto-info-label">Teléfono</span>
+            <a href="tel:+34964000000" class="contacto-info-value contacto-info-link">
+              +34 964 00 00 00
+            </a>
+          </div>
+        </li>
+
+        <li class="contacto-info-item reveal" aria-label="Horario de atención">
+          <div class="contacto-info-icon" aria-hidden="true">
+            <i class="fas fa-clock"></i>
+          </div>
+          <div class="contacto-info-text">
+            <span class="contacto-info-label">Horario</span>
+            <span class="contacto-info-value">
+              Lunes a jueves: 9:00 – 18:00<br />
+              Viernes: 9:00 – 14:00<br />
+              Festivos y fines de semana: cerrado
+            </span>
+          </div>
+        </li>
+
+      </ul>
+
+      <!-- Bloque decorativo de coordenadas -->
+      <div class="contacto-coords reveal" aria-label="Coordenadas geográficas de Castellón de la Plana">
+        <span class="contacto-coords-label">Coordenadas</span>
+        <div class="contacto-coords-data">
+          <span class="contacto-coords-line">39° 59' 14" N</span>
+          <span class="contacto-coords-line">00° 01' 39" W</span>
+          <span class="contacto-coords-line">Castellón · España</span>
+        </div>
+        <!-- Mapa iframe Google Maps -->
+        <div class="contacto-map-wrap">
+          <iframe
+            title="Ubicación de ClarityLines Technologies S.L. en Castellón de la Plana"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48636.03685793!2d-0.062838!3d39.986357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5fffc01e8b9025%3A0x48ab01ff0b0fa5c8!2sCastellón%20de%20la%20Plana%2C%20Castellón!5e0!3m2!1ses!2ses!4v1713000000000"
+            width="100%"
+            height="200"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            aria-label="Mapa de Castellón de la Plana"
+          ></iframe>
+        </div>
+      </div>
+
+    </aside><!-- /contacto-info -->
+
+  </div><!-- /contacto-inner -->
+
+</section>
+
+
+<!-- ====================================================
+     FOOTER
+===================================================== -->
+<footer class="site-footer" id="site-footer">
+
+  <div class="footer-newsletter reveal">
+    <div class="newsletter-text">
+      <h3>Mantente al día<br /><em>con ClarityLines</em></h3>
+      <p>Novedades de producto, guías de salud visual y ofertas exclusivas para suscriptores.</p>
+    </div>
+    <div id="newsletter-form">
+      <div class="newsletter-input-wrap" id="newsletter-input-wrap">
+        <input
+          type="email"
+          id="newsletter-email"
+          placeholder="Tu correo electrónico"
+          aria-label="Correo electrónico para newsletter"
+        />
+        <button id="newsletter-btn" class="btn btn--amber btn--newsletter">Suscribirse</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-nav-grid">
+
+    <div class="footer-brand">
+      <a href="index.html" class="logo" aria-label="ClarityLines inicio">
+        <span class="logo-main">Clarity<span>Lines</span></span>
+        <span class="logo-sub">Smart Eyewear</span>
+      </a>
+      <p class="footer-tagline">
+        Gafas inteligentes con lentes adaptativas.<br />Castellón de la Plana · Online.
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="footer-col-title">Producto</h4>
+      <ul>
+        <li><a href="index.html#features">Tecnología</a></li>
+        <li><a href="index.html#how-it-works">Cómo funciona</a></li>
+        <li><a href="index.html#pricing">Precios</a></li>
+        <li><a href="#">App ClarityLines</a></li>
+        <li><a href="#">Accesorios</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="footer-col-title">Empresa</h4>
+      <ul>
+        <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+        <li><a href="#">Investigación</a></li>
+        <li><a href="#">Prensa</a></li>
+        <li><a href="#">Trabaja con nosotros</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="footer-col-title">Síguenos</h4>
+      <ul class="footer-social">
+        <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        <li><a href="#" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i> TikTok</a></li>
+        <li><a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i> YouTube</a></li>
+        <li><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-legal">
+    <p>&copy; <span id="footer-year"></span> ClarityLines Technologies S.L. Todos los derechos reservados.</p>
+    <ul>
+      <li><a href="#">Privacidad</a></li>
+      <li><a href="#">Aviso legal</a></li>
+      <li><a href="#">Cookies</a></li>
+    </ul>
+  </div>
+
+</footer>
+
+
+<script src="../scripts/contacto.js"></script>
+</body>
+</html>

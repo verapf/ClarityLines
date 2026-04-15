@@ -1,0 +1,266 @@
+/* === CLARITYLINES — sobre-nosotros.css === */
+
+/* ----------------------------------------------------------------
+   HERO INTERIOR
+---------------------------------------------------------------- */
+.page-hero {
+  background: var(--navy-dark);
+  padding: clamp(7rem, 15vh, 11rem) clamp(1.5rem, 5vw, 5rem) clamp(4rem, 8vh, 6rem);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Línea decorativa ámbar en el borde inferior */
+.page-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: clamp(1.5rem, 5vw, 5rem);
+  width: clamp(3rem, 8vw, 6rem);
+  height: 2px;
+  background: var(--amber-light);
+}
+
+.page-hero-inner {
+  max-width: 820px;
+}
+
+.page-hero .label {
+  color: var(--amber-light);
+}
+
+.page-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw + 1rem, 7rem);
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin-bottom: var(--space-m);
+}
+
+.page-hero-title em {
+  color: var(--amber-light);
+}
+
+.page-hero-sub {
+  font-size: clamp(0.95rem, 1.2vw + 0.4rem, 1.15rem);
+  color: rgba(255, 255, 255, 0.62);
+  line-height: 1.8;
+  max-width: 640px;
+}
+
+/* ----------------------------------------------------------------
+   SECCIÓN HISTORIA — layout editorial 2 columnas
+---------------------------------------------------------------- */
+.historia {
+  background: var(--paper);
+}
+
+.historia-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: start;
+}
+
+.historia-text .label { margin-top: 0; }
+
+.historia-body {
+  color: var(--text-mid);
+  line-height: 1.85;
+  margin-top: var(--space-m);
+  font-size: 1rem;
+}
+
+.historia-body + .historia-body {
+  margin-top: var(--space-s);
+}
+
+/* ----------------------------------------------------------------
+   TIMELINE VERTICAL
+---------------------------------------------------------------- */
+.historia-timeline .label {
+  display: block;
+  margin-bottom: var(--space-s);
+}
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+/* Línea vertical conectora */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0.5rem;
+  left: 0.4rem;
+  width: 1px;
+  height: calc(100% - 1rem);
+  background: var(--cream-border);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: var(--space-l);
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -1.62rem;
+  top: 0.35rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: var(--cream-border);
+  border: 2px solid var(--paper);
+  box-shadow: 0 0 0 2px var(--cream-border);
+}
+
+.timeline-dot--active {
+  background: var(--amber-light);
+  box-shadow: 0 0 0 2px var(--amber-pale);
+}
+
+.timeline-year {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--amber);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-title {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--ink);
+  margin-bottom: 0.4rem;
+}
+
+.timeline-desc {
+  font-size: 0.88rem;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* ----------------------------------------------------------------
+   SECCIÓN EQUIPO
+---------------------------------------------------------------- */
+.equipo {
+  background: var(--cream);
+}
+
+.equipo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-m);
+}
+
+/* Reutiliza la estructura visual de .price-card */
+.equipo-card {
+  background: var(--white);
+  border: 1px solid var(--cream-border);
+  border-radius: var(--radius);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+
+.equipo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(26, 30, 46, 0.10);
+}
+
+.equipo-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--amber-pale);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--amber);
+  font-size: 1.1rem;
+  margin-bottom: var(--space-m);
+}
+
+.equipo-nombre {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.35rem;
+  color: var(--ink);
+  margin-bottom: 0.2rem;
+}
+
+.equipo-cargo {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--amber);
+  display: block;
+  margin-bottom: var(--space-s);
+}
+
+.equipo-bio {
+  font-size: 0.88rem;
+  color: var(--text-mid);
+  line-height: 1.75;
+}
+
+/* ----------------------------------------------------------------
+   SECCIÓN VALORES — reutiliza .avalada-card de style.css
+---------------------------------------------------------------- */
+.valores {
+  background: var(--navy-dark);
+}
+
+.valores .section-header-center .label {
+  color: var(--amber-light);
+}
+
+.valores .section-title {
+  color: var(--white);
+}
+
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-m);
+}
+
+/* ----------------------------------------------------------------
+   RESPONSIVE
+---------------------------------------------------------------- */
+@media (max-width: 1100px) {
+  .historia-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .equipo-grid { grid-template-columns: 1fr 1fr; }
+  .valores-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 820px) {
+  .page-hero { padding-top: clamp(5.5rem, 12vh, 8rem); }
+  .equipo-grid { grid-template-columns: 1fr 1fr; }
+  .valores-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  .equipo-grid { grid-template-columns: 1fr; max-width: 440px; margin: 0 auto; }
+  .valores-grid { grid-template-columns: 1fr; max-width: 440px; margin: 0 auto; }
+}
+
+@media (max-width: 480px) {
+  .equipo-card { padding: 2rem 1.5rem; }
+  .historia-inner { gap: 2rem; }
+}
