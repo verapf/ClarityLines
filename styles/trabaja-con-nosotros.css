@@ -1,0 +1,382 @@
+/* === CLARITYLINES — trabaja-con-nosotros.css === */
+
+/* ----------------------------------------------------------------
+   HERO INTERIOR
+---------------------------------------------------------------- */
+.page-hero {
+  background: var(--navy-dark);
+  padding: clamp(7rem, 15vh, 11rem) clamp(1.5rem, 5vw, 5rem) clamp(4rem, 8vh, 6rem);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: clamp(1.5rem, 5vw, 5rem);
+  width: clamp(3rem, 8vw, 6rem);
+  height: 2px;
+  background: var(--amber-light);
+}
+
+.page-hero-inner { max-width: 820px; }
+
+.page-hero .label { color: var(--amber-light); }
+
+.page-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw + 1rem, 7rem);
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin-bottom: var(--space-m);
+}
+
+.page-hero-title em { color: var(--amber-light); }
+
+.page-hero-sub {
+  font-size: clamp(0.95rem, 1.2vw + 0.4rem, 1.15rem);
+  color: rgba(255, 255, 255, 0.62);
+  line-height: 1.8;
+  max-width: 640px;
+}
+
+/* ----------------------------------------------------------------
+   POR QUÉ — 3 razones culturales
+---------------------------------------------------------------- */
+.tcn-porqué {
+  background: var(--paper);
+}
+
+.tcn-porque-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-m);
+}
+
+.tcn-porque-card {
+  background: var(--white);
+  border: 1px solid var(--cream-border);
+  border-radius: var(--radius);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+
+.tcn-porque-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(26, 30, 46, 0.08);
+}
+
+.tcn-porque-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--amber-pale);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--amber);
+  font-size: 1.1rem;
+  margin-bottom: var(--space-m);
+  flex-shrink: 0;
+}
+
+.tcn-porque-title {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--ink);
+  margin-bottom: var(--space-s);
+}
+
+.tcn-porque-desc {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  line-height: 1.8;
+}
+
+/* ----------------------------------------------------------------
+   BENEFICIOS — layout editorial 2 columnas
+---------------------------------------------------------------- */
+.tcn-beneficios {
+  background: var(--cream);
+}
+
+.tcn-beneficios-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: clamp(3rem, 6vw, 7rem);
+  align-items: start;
+}
+
+.tcn-beneficios-intro {
+  font-size: clamp(0.9rem, 1.1vw + 0.3rem, 1.05rem);
+  color: var(--text-mid);
+  line-height: 1.85;
+  margin-top: var(--space-m);
+}
+
+.tcn-beneficios-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--cream-border);
+}
+
+.tcn-beneficio-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.6rem 0;
+  border-bottom: 1px solid var(--cream-border);
+  transition: background var(--dur) var(--ease);
+}
+
+.tcn-beneficio-item:hover {
+  background: var(--paper);
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  margin: 0 -0.75rem;
+  border-radius: var(--radius);
+  border-bottom-color: transparent;
+}
+
+.tcn-beneficio-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  background: var(--amber-pale);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--amber);
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.tcn-beneficio-title {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--ink);
+  margin-bottom: 0.3rem;
+}
+
+.tcn-beneficio-desc {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  line-height: 1.75;
+}
+
+/* ----------------------------------------------------------------
+   POSICIONES ABIERTAS — acordeón accesible
+---------------------------------------------------------------- */
+.tcn-posiciones {
+  background: var(--paper);
+}
+
+.tcn-posiciones-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--cream-border);
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.tcn-posicion-item {
+  border-bottom: 1px solid var(--cream-border);
+}
+
+.tcn-posicion-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.6rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background var(--dur) var(--ease);
+}
+
+.tcn-posicion-header:hover {
+  background: var(--cream);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0 -1rem;
+  width: calc(100% + 2rem);
+  border-radius: var(--radius);
+}
+
+.tcn-posicion-header[aria-expanded="true"] .tcn-posicion-chevron {
+  transform: rotate(45deg);
+}
+
+.tcn-posicion-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.tcn-posicion-dpto {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+
+.tcn-posicion-nombre {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+.tcn-posicion-header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.tcn-posicion-tipo,
+.tcn-posicion-lugar {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-ghost);
+}
+
+.tcn-posicion-chevron {
+  color: var(--amber);
+  font-size: 0.8rem;
+  transition: transform var(--dur) var(--ease);
+  flex-shrink: 0;
+}
+
+.tcn-posicion-body {
+  padding: 0 0 var(--space-m);
+}
+
+.tcn-posicion-body[hidden] { display: none; }
+
+.tcn-posicion-desc {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  line-height: 1.85;
+  margin-bottom: var(--space-m);
+}
+
+.tcn-posicion-req {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: var(--space-m);
+}
+
+.tcn-posicion-req li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.88rem;
+  color: var(--text-mid);
+  line-height: 1.65;
+}
+
+.tcn-posicion-req .fa-check {
+  color: var(--amber-light);
+  font-size: 0.72rem;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+.tcn-posicion-cta {
+  font-size: 0.62rem;
+}
+
+/* ----------------------------------------------------------------
+   CANDIDATURA ESPONTÁNEA
+---------------------------------------------------------------- */
+.tcn-espontanea {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 860px;
+  margin: var(--space-l) auto 0;
+  padding: var(--space-m) var(--space-m);
+  background: var(--cream);
+  border: 1px solid var(--cream-border);
+  border-radius: var(--radius);
+}
+
+.tcn-espontanea-icon {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  background: var(--amber-pale);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--amber);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.tcn-espontanea-text {
+  flex: 1;
+}
+
+.tcn-espontanea-title {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--ink);
+  margin-bottom: 0.3rem;
+}
+
+.tcn-espontanea-desc {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+.tcn-espontanea-btn {
+  flex-shrink: 0;
+  font-size: 0.62rem;
+}
+
+/* ----------------------------------------------------------------
+   RESPONSIVE
+---------------------------------------------------------------- */
+@media (max-width: 1100px) {
+  .tcn-beneficios-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
+@media (max-width: 820px) {
+  .page-hero { padding-top: clamp(5.5rem, 12vh, 8rem); }
+  .tcn-porque-grid { grid-template-columns: 1fr 1fr; }
+  .tcn-posicion-header-right .tcn-posicion-tipo,
+  .tcn-posicion-header-right .tcn-posicion-lugar { display: none; }
+}
+
+@media (max-width: 640px) {
+  .tcn-porque-grid { grid-template-columns: 1fr; max-width: 440px; margin: 0 auto; }
+  .tcn-espontanea  { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .tcn-espontanea-btn { align-self: flex-start; }
+  .tcn-posicion-header-right { gap: 0.5rem; }
+}
+
+@media (max-width: 480px) {
+  .tcn-porque-card { padding: 2rem 1.5rem; }
+}
