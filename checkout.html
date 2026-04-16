@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout — ClarityLines</title>
+  <meta name="description" content="Finaliza tu compra en ClarityLines." />
+  <meta name="robots" content="noindex, follow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/carrito.css" />
+</head>
+<body class="header-on-light">
+
+<div class="progress-bar" id="progress-bar" aria-hidden="true"></div>
+
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="ClarityLines inicio">
+      <span class="logo-main">Clarity<span>Lines</span></span>
+      <span class="logo-sub">Smart Eyewear</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html#features">Tecnología</a></li>
+        <li><a href="index.html#how-it-works">Cómo funciona</a></li>
+        <li><a href="index.html#pricing">Precios</a></li>
+        <li><a href="index.html#avalada">Ciencia</a></li>
+      </ul>
+    </nav>
+
+    <a href="carrito.html" class="cart-icon" id="cart-icon" aria-label="Carrito">
+      <i class="fas fa-bag-shopping" aria-hidden="true"></i>
+      <span class="cart-count" id="cart-count">0</span>
+    </a>
+
+    <div class="header-actions">
+      <a href="index.html#pricing" class="btn btn--amber btn--header">Comprar ahora</a>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav">
+    <ul>
+      <li><a href="index.html#features">Tecnología</a></li>
+      <li><a href="index.html#how-it-works">Cómo funciona</a></li>
+      <li><a href="index.html#pricing">Precios</a></li>
+      <li><a href="index.html#avalada">Ciencia</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="checkout-main">
+  <section class="checkout-wrap" aria-label="Checkout">
+    <div class="checkout-box" id="checkout-panel">
+      <h1 class="section-title" style="margin-bottom: 1.2rem;">Datos de envío</h1>
+      <form id="checkout-form" class="checkout-form" novalidate>
+        <div>
+          <label for="full-name">Nombre completo</label>
+          <input id="full-name" name="full-name" type="text" required />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+        <div>
+          <label for="address">Dirección</label>
+          <input id="address" name="address" type="text" required />
+        </div>
+        <div>
+          <label for="city">Ciudad</label>
+          <input id="city" name="city" type="text" required />
+        </div>
+        <div>
+          <label for="postal">Código postal</label>
+          <input id="postal" name="postal" type="text" required />
+        </div>
+        <button type="submit" class="btn btn--amber">Confirmar pedido</button>
+      </form>
+    </div>
+
+    <aside class="checkout-summary" aria-label="Resumen del pedido">
+      <h2>Tu pedido</h2>
+      <div id="checkout-items"></div>
+      <div class="summary-line"><span>Subtotal</span><strong id="co-subtotal">€0.00</strong></div>
+      <div class="summary-line"><span>Envío</span><strong id="co-shipping">€0.00</strong></div>
+      <div class="summary-line"><span>IVA (21%)</span><strong id="co-iva">€0.00</strong></div>
+      <div class="summary-line"><span>Total</span><strong id="co-total">€0.00</strong></div>
+      <p class="summary-note">Resumen de solo lectura.</p>
+    </aside>
+  </section>
+</main>
+
+<footer class="site-footer" id="site-footer">
+
+  <div class="footer-newsletter reveal">
+    <div class="newsletter-text">
+      <h3>Mantente al día<br /><em>con ClarityLines</em></h3>
+      <p>Novedades de producto, guías de salud visual y ofertas exclusivas para suscriptores.</p>
+    </div>
+    <div id="newsletter-form">
+      <div class="newsletter-input-wrap" id="newsletter-input-wrap">
+        <input type="email" id="newsletter-email" placeholder="Tu correo electrónico" aria-label="Correo electrónico para newsletter" />
+        <button id="newsletter-btn" class="btn btn--amber btn--newsletter">Suscribirse</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-nav-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo" aria-label="ClarityLines inicio">
+        <span class="logo-main">Clarity<span>Lines</span></span>
+        <span class="logo-sub">Smart Eyewear</span>
+      </a>
+      <p class="footer-tagline">Gafas inteligentes con lentes adaptativas.<br />Castellón de la Plana · Online.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="footer-col-title">Producto</h4>
+      <ul>
+        <li><a href="index.html#features">Tecnología</a></li>
+        <li><a href="index.html#how-it-works">Cómo funciona</a></li>
+        <li><a href="pages/clarity-air.html">Clarity Air</a></li>
+        <li><a href="pages/clarity-pro.html">Clarity Pro</a></li>
+        <li><a href="pages/clarity-elite.html">Clarity Elite</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="footer-col-title">Empresa</h4>
+      <ul>
+        <li><a href="pages/sobre-nosotros.html">Sobre nosotros</a></li>
+        <li><a href="pages/investigacion.html">Investigación</a></li>
+        <li><a href="pages/prensa.html">Prensa</a></li>
+        <li><a href="pages/trabaja-con-nosotros.html">Trabaja con nosotros</a></li>
+        <li><a href="pages/contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="footer-col-title">Síguenos</h4>
+      <ul class="footer-social">
+        <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        <li><a href="#" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i> TikTok</a></li>
+        <li><a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i> YouTube</a></li>
+        <li><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-legal">
+    <p>&copy; <span id="footer-year"></span> ClarityLines Technologies S.L. Todos los derechos reservados.</p>
+    <ul>
+      <li><a href="#">Privacidad</a></li>
+      <li><a href="#">Aviso legal</a></li>
+      <li><a href="#">Cookies</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="scripts/carrito.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  var confirmedSnapshot = null;
+
+  function formatEUR(value) {
+    return new Intl.NumberFormat('es-ES', {
+      style: 'currency',
+      currency: 'EUR'
+    }).format(value);
+  }
+
+  function getShipping(subtotal) {
+    return subtotal >= 300 || subtotal === 0 ? 0 : 19.90;
+  }
+
+  function updateBadge() {
+    var badge = document.getElementById('cart-count');
+    if (!badge || !window.CL_CART) return;
+
+    var count = window.CL_CART.getCount();
+    badge.textContent = String(count);
+    badge.style.display = count === 0 ? 'none' : 'inline-flex';
+  }
+
+  function renderSummary() {
+    var items = confirmedSnapshot ? confirmedSnapshot.items : window.CL_CART.getCart();
+    var subtotal = confirmedSnapshot ? confirmedSnapshot.subtotal : window.CL_CART.getTotal();
+    var shipping = getShipping(subtotal);
+    var iva = (subtotal + shipping) * 0.21;
+    var total = subtotal + shipping + iva;
+
+    var wrap = document.getElementById('checkout-items');
+    if (!items.length) {
+      wrap.innerHTML = '<p class="summary-note">No hay productos en el carrito.</p>';
+    } else {
+      wrap.innerHTML = items.map(function (item) {
+        return '<div class="summary-line"><span>' + item.product.name + ' × ' + item.qty + '</span><strong>' + formatEUR(item.subtotal) + '</strong></div>';
+      }).join('');
+    }
+
+    document.getElementById('co-subtotal').textContent = formatEUR(subtotal);
+    document.getElementById('co-shipping').textContent = shipping === 0 ? 'GRATIS' : formatEUR(shipping);
+    document.getElementById('co-iva').textContent = formatEUR(iva);
+    document.getElementById('co-total').textContent = formatEUR(total);
+  }
+
+  function showConfirmation() {
+    var order = '#CL-' + Math.floor(1000 + Math.random() * 9000);
+    var panel = document.getElementById('checkout-panel');
+
+    confirmedSnapshot = {
+      items: window.CL_CART.getCart(),
+      subtotal: window.CL_CART.getTotal()
+    };
+
+    var finalShipping = getShipping(confirmedSnapshot.subtotal);
+    var finalIva = (confirmedSnapshot.subtotal + finalShipping) * 0.21;
+    var finalTotal = confirmedSnapshot.subtotal + finalShipping + finalIva;
+
+    localStorage.setItem('cl_cart', JSON.stringify([]));
+    window.dispatchEvent(new CustomEvent('cl:cart:updated'));
+
+    panel.innerHTML =
+      '<div class="confirmation">' +
+        '<i class="fas fa-circle-check" aria-hidden="true"></i>' +
+        '<h2>Pedido confirmado</h2>' +
+        '<p>Tu pedido ha sido confirmado. Recibirás un email en breve.</p>' +
+        '<p>Importe final: <strong>' + formatEUR(finalTotal) + '</strong></p>' +
+        '<div class="order-id">' + order + '</div>' +
+      '</div>';
+
+    renderSummary();
+    updateBadge();
+  }
+
+  function initForm() {
+    var form = document.getElementById('checkout-form');
+    if (!form) return;
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      showConfirmation();
+    });
+  }
+
+  (function initCommon() {
+    var header = document.getElementById('site-header');
+    if (header) {
+      document.documentElement.style.setProperty('--cl-header-h', header.offsetHeight + 'px');
+      window.addEventListener('scroll', function () {
+        header.classList.toggle('scrolled', window.scrollY > 70);
+      }, { passive: true });
+    }
+
+    var el = document.getElementById('footer-year');
+    if (el) el.textContent = new Date().getFullYear();
+
+    var btn = document.getElementById('hamburger');
+    var nav = document.getElementById('mobile-nav');
+    if (btn && nav) {
+      btn.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', String(open));
+      });
+    }
+  })();
+
+  window.addEventListener('cl:cart:updated', function () {
+    updateBadge();
+    renderSummary();
+  });
+
+  initForm();
+  updateBadge();
+  renderSummary();
+})();
+</script>
+</body>
+</html>

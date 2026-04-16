@@ -19,6 +19,7 @@
 
   <!-- Estilos -->
   <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/carrito.css" />
 </head>
 <body>
 
@@ -47,6 +48,11 @@
         <li><a href="#avalada">Ciencia</a></li>
       </ul>
     </nav>
+
+    <a href="carrito.html" class="cart-icon" id="cart-icon" aria-label="Carrito">
+      <i class="fas fa-bag-shopping" aria-hidden="true"></i>
+      <span class="cart-count" id="cart-count">0</span>
+    </a>
 
     <div class="header-actions">
       <a href="#pricing" class="btn btn--amber btn--header">Comprar ahora</a>
@@ -497,8 +503,8 @@
   <div class="pricing-grid">
 
     <div class="price-card reveal">
-      <div class="price-tier">Essential</div>
-      <div class="price-name">Clarity One</div>
+      <div class="price-tier">Air</div>
+      <div class="price-name">Clarity Air</div>
       <p class="price-tagline">Para quienes quieren dar el primer paso.</p>
       <div class="price-amount">
         <span class="price-currency">€</span>
@@ -515,7 +521,7 @@
         <li class="muted"><i class="fas fa-times" aria-hidden="true"></i> IA adaptativa</li>
         <li class="muted"><i class="fas fa-times" aria-hidden="true"></i> Sensor de entorno avanzado</li>
       </ul>
-      <a href="#" class="btn btn--outline btn--full">Elegir Essential</a>
+      <a href="pages/clarity-air.html" class="btn btn--outline btn--full">Elegir Clarity Air</a>
     </div>
 
     <div class="price-card price-card--featured reveal">
@@ -538,7 +544,7 @@
         <li><i class="fas fa-check" aria-hidden="true"></i> IA adaptativa (aprende tus hábitos)</li>
         <li class="muted"><i class="fas fa-times" aria-hidden="true"></i> Personalización de montura premium</li>
       </ul>
-      <a href="#" class="btn btn--amber btn--full">Elegir Clarity Pro</a>
+      <a href="pages/clarity-pro.html" class="btn btn--amber btn--full">Elegir Clarity Pro</a>
     </div>
 
     <div class="price-card reveal">
@@ -560,7 +566,7 @@
         <li><i class="fas fa-check" aria-hidden="true"></i> Garantía extendida 4 años</li>
         <li><i class="fas fa-check" aria-hidden="true"></i> Ajuste presencial en casa (servicio Elite)</li>
       </ul>
-      <a href="#" class="btn btn--outline btn--full">Elegir Elite</a>
+      <a href="pages/clarity-elite.html" class="btn btn--outline btn--full">Elegir Clarity Elite</a>
     </div>
 
   </div>
@@ -697,8 +703,9 @@
         <li><a href="#features">Tecnología</a></li>
         <li><a href="#how-it-works">Cómo funciona</a></li>
         <li><a href="#pricing">Precios</a></li>
-        <li><a href="#">App ClarityLines</a></li>
-        <li><a href="#">Accesorios</a></li>
+        <li><a href="pages/clarity-air.html">Clarity Air</a></li>
+        <li><a href="pages/clarity-pro.html">Clarity Pro</a></li>
+        <li><a href="pages/clarity-elite.html">Clarity Elite</a></li>
       </ul>
     </div>
 
@@ -736,7 +743,7 @@
 
 </footer>
 
-
+<script src="scripts/carrito.js"></script>
 <script src="scripts/script.js"></script>
 </body>
 </html>

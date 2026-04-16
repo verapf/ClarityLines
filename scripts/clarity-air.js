@@ -1,7 +1,7 @@
 'use strict';
 
 /* ================================================================
-   CLARITYLINES — script.js
+   CLARITYLINES — clarity-air.js
    Versión: 2026
 ================================================================ */
 
@@ -9,7 +9,7 @@
    Sticky nav — añade .scrolled al superar 70px de scroll
 ---------------------------------------------------------------- */
 (function initStickyNav() {
-  const header = document.getElementById('site-header');
+  var header = document.getElementById('site-header');
   if (!header) return;
 
   function onScroll() {
@@ -25,15 +25,15 @@
    Hamburguesa — apertura y cierre del menú móvil
 ---------------------------------------------------------------- */
 (function initHamburger() {
-  const btn = document.getElementById('hamburger');
-  const nav = document.getElementById('mobile-nav');
+  var btn = document.getElementById('hamburger');
+  var nav = document.getElementById('mobile-nav');
   if (!btn || !nav) return;
 
   btn.addEventListener('click', function () {
-    const open = nav.classList.toggle('open');
+    var open = nav.classList.toggle('open');
     btn.setAttribute('aria-expanded', String(open));
 
-    const spans = btn.querySelectorAll('span');
+    var spans = btn.querySelectorAll('span');
     if (open) {
       spans[0].style.transform = 'translateY(6.5px) rotate(45deg)';
       spans[1].style.opacity   = '0';
@@ -65,16 +65,16 @@
 (function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
-      const id = this.getAttribute('href');
+      var id = this.getAttribute('href');
       if (id === '#') return;
 
-      const target = document.querySelector(id);
+      var target = document.querySelector(id);
       if (!target) return;
 
       e.preventDefault();
 
-      const headerH = document.getElementById('site-header').offsetHeight;
-      const top = target.getBoundingClientRect().top + window.scrollY - headerH - 16;
+      var headerH = document.getElementById('site-header').offsetHeight;
+      var top = target.getBoundingClientRect().top + window.scrollY - headerH - 16;
       window.scrollTo({ top: top, behavior: 'smooth' });
     });
   });
@@ -85,14 +85,14 @@
    Newsletter — confirmación inline sin recarga
 ---------------------------------------------------------------- */
 (function initNewsletter() {
-  const btn        = document.getElementById('newsletter-btn');
-  const emailInput = document.getElementById('newsletter-email');
-  const wrap       = document.getElementById('newsletter-input-wrap');
+  var btn        = document.getElementById('newsletter-btn');
+  var emailInput = document.getElementById('newsletter-email');
+  var wrap       = document.getElementById('newsletter-input-wrap');
   if (!btn || !emailInput || !wrap) return;
 
   btn.addEventListener('click', function () {
-    const email = emailInput.value.trim();
-    const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    var email = emailInput.value.trim();
+    var valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
     if (!valid) {
       emailInput.style.borderBottom = '1px solid #c0392b';
@@ -113,7 +113,7 @@
     setTimeout(function () {
       wrap.style.display = 'none';
 
-      const confirm = document.createElement('div');
+      var confirm = document.createElement('div');
       confirm.className = 'newsletter-confirm';
       confirm.innerHTML =
         '<i class="fas fa-circle-check"></i>' +
@@ -144,7 +144,7 @@
    Año en el footer
 ---------------------------------------------------------------- */
 (function injectYear() {
-  const el = document.getElementById('footer-year');
+  var el = document.getElementById('footer-year');
   if (el) el.textContent = new Date().getFullYear();
 })();
 
@@ -160,7 +160,7 @@
     return;
   }
 
-  const observer = new IntersectionObserver(function (entries) {
+  var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
         entry.target.classList.add('in-view');
@@ -176,61 +176,22 @@
 
 
 /* ----------------------------------------------------------------
-   Hero — efecto Ken Burns al cargar la imagen
----------------------------------------------------------------- */
-(function initHeroImage() {
-  const img = document.getElementById('hero-img');
-  if (!img) return;
-
-  if (img.complete) {
-    img.classList.add('loaded');
-  } else {
-    img.addEventListener('load', function () {
-      img.classList.add('loaded');
-    });
-  }
-})();
-
-
-/* ----------------------------------------------------------------
-   Hero — parallax suave (solo escritorio, respeta
-   prefers-reduced-motion)
----------------------------------------------------------------- */
-(function initHeroParallax() {
-  const wrap = document.getElementById('hero-image-wrap');
-  if (!wrap) return;
-
-  const mq = window.matchMedia(
-    '(min-width: 820px) and (prefers-reduced-motion: no-preference)'
-  );
-
-  window.addEventListener('scroll', function () {
-    if (!mq.matches) return;
-    wrap.style.transform = 'translateY(' + (window.scrollY * 0.25) + 'px)';
-  }, { passive: true });
-})();
-
-
-/* ----------------------------------------------------------------
    Barra de progreso de lectura
-   Calcula el porcentaje de scroll respecto al total de la página
 ---------------------------------------------------------------- */
 (function initProgressBar() {
-  const bar = document.getElementById('progress-bar');
+  var bar = document.getElementById('progress-bar');
   if (!bar) return;
 
-  /* Respeta prefers-reduced-motion — si el usuario prefiere sin movimiento
-     la barra permanece oculta para no distraer */
-  const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var mq = window.matchMedia('(prefers-reduced-motion: reduce)');
   if (mq.matches) {
     bar.style.display = 'none';
     return;
   }
 
   function updateBar() {
-    const scrollTop  = window.scrollY;
-    const docHeight  = document.documentElement.scrollHeight - window.innerHeight;
-    const porcentaje = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    var scrollTop  = window.scrollY;
+    var docHeight  = document.documentElement.scrollHeight - window.innerHeight;
+    var porcentaje = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
     bar.style.width  = porcentaje + '%';
   }
 
@@ -240,18 +201,133 @@
 
 
 /* ----------------------------------------------------------------
+   initSpecsTable — aplica .specs-row--alt a filas pares de la
+   tabla de especificaciones para efecto zebra sin :nth-child
+---------------------------------------------------------------- */
+(function initSpecsTable() {
+  var table = document.getElementById('air-specs-table');
+  if (!table) return;
+
+  var rows = table.querySelectorAll('tbody .specs-row');
+  rows.forEach(function (row, index) {
+    if (index % 2 !== 0) {
+      row.classList.add('specs-row--alt');
+    }
+  });
+})();
+
+
+/* ----------------------------------------------------------------
+   initComparativaHighlight — destaca la columna del modelo actual
+   y muestra indicador de scroll si la tabla desborda en móvil
+---------------------------------------------------------------- */
+(function initComparativaHighlight() {
+  var table    = document.getElementById('comparativa-table');
+  var scrollEl = document.getElementById('comparativa-scroll-wrap');
+  var hint     = document.getElementById('comparativa-scroll-hint');
+  if (!table) return;
+
+  /* El modelo activo de esta página es "air"; la clase
+     comparativa-col--active ya está aplicada en el HTML,
+     pero nos aseguramos de que todas las celdas de la columna
+     también la lleven para la apariencia de columna completa */
+  var activeCols = table.querySelectorAll('[data-model="air"], .comparativa-col--active');
+  activeCols.forEach(function (cell) {
+    cell.classList.add('comparativa-col--active');
+  });
+
+  /* Indicador de scroll horizontal en móvil */
+  if (!scrollEl || !hint) return;
+
+  function checkOverflow() {
+    var inner = scrollEl.querySelector('.prod-comparativa-scroll');
+    if (!inner) return;
+    if (inner.scrollWidth > inner.clientWidth) {
+      hint.classList.add('visible');
+    } else {
+      hint.classList.remove('visible');
+    }
+  }
+
+  checkOverflow();
+  window.addEventListener('resize', checkOverflow, { passive: true });
+
+  /* Ocultar indicador cuando el usuario ya ha hecho scroll */
+  var inner = scrollEl.querySelector('.prod-comparativa-scroll');
+  if (inner) {
+    inner.addEventListener('scroll', function () {
+      if (inner.scrollLeft > 20) {
+        hint.classList.remove('visible');
+      }
+    }, { passive: true });
+  }
+})();
+
+
+/* ----------------------------------------------------------------
    Contador de carrito en header
 ---------------------------------------------------------------- */
 (function initCartCount() {
-  const badge = document.getElementById('cart-count');
+  var badge = document.getElementById('cart-count');
   if (!badge || !window.CL_CART) return;
 
   function renderCount() {
-    const count = window.CL_CART.getCount();
+    var count = window.CL_CART.getCount();
     badge.textContent = String(count);
     badge.style.display = count === 0 ? 'none' : 'inline-flex';
   }
 
   window.addEventListener('cl:cart:updated', renderCount);
   renderCount();
+})();
+
+
+/* ----------------------------------------------------------------
+   Añadir al carrito con feedback inline
+---------------------------------------------------------------- */
+(function initAddToCart() {
+  var btn = document.querySelector('.add-to-cart-btn[data-product-id]');
+  if (!btn || !window.CL_CART) return;
+
+  var original = btn.innerHTML;
+  var timer = null;
+
+  btn.addEventListener('click', function () {
+    var productId = btn.getAttribute('data-product-id');
+    if (!productId) return;
+
+    window.CL_CART.addItem(productId, 1);
+    btn.innerHTML = '✓ Añadido al carrito';
+
+    if (timer) {
+      clearTimeout(timer);
+    }
+
+    timer = setTimeout(function () {
+      btn.innerHTML = original;
+      timer = null;
+    }, 1200);
+  });
+})();
+
+
+/* ----------------------------------------------------------------
+   Enlaces de compra directa hacia carrito
+---------------------------------------------------------------- */
+(function initBuyLinks() {
+  if (!window.CL_CART) return;
+
+  var links = document.querySelectorAll('.add-to-cart-link[data-product-id]');
+  if (!links.length) return;
+
+  links.forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      var productId = link.getAttribute('data-product-id');
+      if (!productId) return;
+
+      window.CL_CART.addItem(productId, 1);
+      window.location.href = link.getAttribute('href');
+    });
+  });
 })();
