@@ -218,6 +218,24 @@
   gap: var(--space-m);
 }
 
+.prod-features .avalada-card {
+  background: var(--white);
+  border: 1px solid var(--cream-border);
+}
+
+.prod-features .avalada-card:hover {
+  background: var(--paper);
+  border-color: var(--amber-pale);
+}
+
+.prod-features .avalada-num {
+  color: var(--ink);
+}
+
+.prod-features .avalada-desc {
+  color: var(--text-mid);
+}
+
 /* Elite: tarjetas con acento visual premium */
 .elite-avalada-card {
   border-top: 2px solid var(--amber-pale);
@@ -370,6 +388,17 @@
 .comparativa-col--active .btn--outline {
   border-color: var(--ink);
   color: var(--ink);
+}
+
+.prod-comparativa .prod-comparativa-col .btn--outline {
+  border-color: rgba(255, 255, 255, 0.52);
+  color: var(--white);
+}
+
+.prod-comparativa .prod-comparativa-col .btn--outline:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--white);
+  color: var(--white);
 }
 
 .prod-comparativa-model {
